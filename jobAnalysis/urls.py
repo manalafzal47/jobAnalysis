@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', views.index, name='index'),          # Root path for the React app
+    path('', views.index, name='index'), # Root path for the React app
+    path('', include('authentication.urls')),
 ]
